@@ -1,0 +1,17 @@
+### 매수 요청
+POST http://localhost:8080/api/trade/buy
+Content-Type: application/json
+
+{
+  "symbol": "GD",
+  "price": 12000
+}
+
+### 매도 요청
+POST http://localhost:8080/api/trade/sell
+Content-Type: application/json
+
+{
+  "symbol": "GD",
+  "price": 15000
+}

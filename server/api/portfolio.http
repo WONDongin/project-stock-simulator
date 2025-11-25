@@ -1,0 +1,10 @@
+### 내 포트폴리오 조회
+GET http://localhost:8080/api/portfolio
+
+### 시드 충전
+POST http://localhost:8080/api/portfolio/seed
+Content-Type: application/json
+
+{
+  "amount": 500000
+}
