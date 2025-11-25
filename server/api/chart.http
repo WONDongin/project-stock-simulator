@@ -1,0 +1,6 @@
+### 현재 코인 가격 조회
+GET http://localhost:8080/api/chart/price
+
+### 랜덤 변동률 생성 테스트
+POST http://localhost:8080/api/chart/tick
+Content-Type: application/json

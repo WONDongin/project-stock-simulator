@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>코인 시뮬레이터 게임</title>
+    <link rel="stylesheet" href="../src/css/style.css" />
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="main">
+        <select class="cnt" id="turnSelect">
+          <option value="1">1턴</option>
+          <option value="10">10턴</option>
+          <option value="30">30턴</option>
+          <option value="60">60턴</option>
+        </select>
+      </div>
+
+      <div id="nav">
+        <select id="stock">
+          <option value="10000">GD코인</option>
+          <option value="50000">도지코인</option>
+          <option value="100000">비트코인</option>
+        </select>
+
+        <button class="btn start" id="startBtn">시작</button>
+        <button class="btn buy" id="buyBtn">매수</button>
+        <button class="btn sell" id="sellBtn">매도</button>
+        <button class="btn reset" id="resetBtn">다시 시작</button>
+      </div>
+
+      <div id="boxList">
+        <div class="box">
+          <span>시드 :</span><input id="seed" value="500000" readonly />
+        </div>
+        <div class="box">
+          <span>종목주가 :</span
+          ><input id="stockPrice" value="10000" readonly />
+        </div>
+        <div class="box">
+          <span>등락률 :</span><input id="udRate" readonly />
+        </div>
+        <div class="box">
+          <span>평가금액 :</span><input id="myPrice" readonly />
+        </div>
+        <div class="box">
+          <span>수익률 :</span><input id="myRate" readonly />
+        </div>
+      </div>
+    </div>
+
+    <div id="popup">
+      <img id="rankImage" src="" />
+      <p>당신의 등급: <span id="rank"></span></p>
+    </div>
+
+    <script src="../src/js/script.js"></script>
+  </body>
+</html>
