@@ -1,4 +1,4 @@
-### ⭐ Coin Simulator (코인 시뮬레이터)
+### ⭐ Stock Simulator (주식/코인 시뮬레이터)
 
 <br>
 
