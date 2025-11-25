@@ -199,25 +199,39 @@ step() {
 > 향후 백엔드 확장을 염두한 ERD 구조를 설계
 
 ```nginx
-Portfolio (포트폴리오)
-- id (PK)
-- seed
-- shares
-- average_price
+## Portfolio 테이블
 
-TradeHistory (거래 내역)
-- id (PK)
-- portfolio_id (FK)
-- type (BUY / SELL)
-- price
-- quantity
-- created_at
+| Field         | Type        | Description            |
+| ------------- | ----------- | ---------------------- |
+| id            | BIGINT (PK) | 유저 포트폴리오 ID     |
+| seed          | INT         | 현재 시드(보유한 현금) |
+| shares        | INT         | 보유 수량              |
+| average_price | INT         | 평단가                 |
 
-ChartTick (가격 로그) — optional
-- id (PK)
-- price
-- rate
-- created_at
+---
+
+## TradeHistory 테이블
+
+| Field        | Type        | Description   |
+| ------------ | ----------- | ------------- |
+| id           | BIGINT (PK) | 거래 ID       |
+| portfolio_id | BIGINT (FK) | 포트폴리오 ID |
+| type         | VARCHAR     | BUY or SELL   |
+| price        | INT         | 거래 가격     |
+| quantity     | INT         | 거래 수량     |
+| created_at   | DATETIME    | 거래 시각     |
+
+---
+
+## ChartTick 테이블
+
+| Field      | Type     | Description  |
+| ---------- | -------- | ------------ |
+| id         | BIGINT   | PK           |
+| price      | INT      | 변동 후 가격 |
+| rate       | FLOAT    | 등락률       |
+| created_at | DATETIME | 시각         |
+
 ```
 
 ERD 파일: `/docs/erd.md`
@@ -339,6 +353,7 @@ Response
 ![Seat Selected](./docs/screenshots/rank_2.png)
 ![Seat Selected](./docs/screenshots/rank_3.png)
 ![Seat Selected](./docs/screenshots/rank_4.png)
+
 <Br>
 
 ### 📄 배운 점 (What I Learned)
